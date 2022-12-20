@@ -1,0 +1,14 @@
+﻿@using WebApplication10.Models
+
+<h1>Produkty</h1>
+
+<ul>
+    @foreach(var product in (IEnumerable<Product>)ViewBag.Products)
+    {
+        <li>
+            <h2>@product.Name [@product.Id]</h2>
+            <p>Cena: @product.Price Kč</p>
+            @Html.ActionLink("detail", "Product", "Home", new { id = product.Id, test = 5 })
+        </li>
+    }
+</ul>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    
+    <ul>
+        <li>
+            @Html.ActionLink("úvodní stránka", "Index", "Home")
+        </li>
+        <li>
+            @* @Html.ActionLink("produkty", "Products", "Home") *@
+
+            <a href="@Url.Action("Products", "Home")">produkty</a>
+        </li>
+    </ul>
+
+    @RenderBody()
+       
+</body>
+</html>

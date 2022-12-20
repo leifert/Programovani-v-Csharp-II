@@ -1,0 +1,26 @@
+﻿@model AddToBasketForm
+
+@{
+    Product product = ViewBag.Product as Product;
+}
+
+<h1>Detail produktu @product.Name</h1>
+<p>Cena produktu: @product.Price Kč</p>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(x => x.ProductId)
+
+    <div>
+        @Html.LabelFor(x => x.Count)
+        @Html.TextBoxFor(x => x.Count)
+        @Html.ValidationMessageFor(x => x.Count)
+    </div>
+
+    <button type="submit">přidat</button>
+
+}
+
+
