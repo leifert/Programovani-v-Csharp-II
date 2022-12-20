@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cv7networking", "cv7networking\cv7networking.csproj", "{F00D4BFA-3B28-4959-BCE2-33FA72E2AA26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F00D4BFA-3B28-4959-BCE2-33FA72E2AA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00D4BFA-3B28-4959-BCE2-33FA72E2AA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00D4BFA-3B28-4959-BCE2-33FA72E2AA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00D4BFA-3B28-4959-BCE2-33FA72E2AA26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48EB0DA1-2851-4E8A-B39B-D2D0AAB1ECF3}
+	EndGlobalSection
+EndGlobal
