@@ -1,0 +1,71 @@
+﻿@model Rental
+@{
+    Bike bike = (Bike) TempData["bike"];
+    
+}
+<div class="container">
+    <h2>Vytvořit novou výpůjčku</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BikeId, new { @class = "control-label col-md-2 " })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.BikeId, @ViewBag.Bikes as SelectList )
+                @Html.ValidationMessageFor(model => model.BikeId, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Start, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Start, new { htmlAttributes = new { @type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.Start, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.End, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.End, new { htmlAttributes = new { @type = "datetime-local" } })
+                @Html.ValidationMessageFor(model => model.End, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @type = "number", @value = "100", @min = "0", @step = "1" } })
+                @Html.ValidationMessageFor(model => model.Price, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerName, new { @class = "control-label col-md-2 " })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerName)
+                @Html.ValidationMessageFor(model => model.CustomerName, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerEmail, new { @class = "control-label col-md-2 " })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerEmail)
+                @Html.ValidationMessageFor(model => model.CustomerEmail, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CustomerPhoneNumber, new { @class = "control-label col-md-2 " })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CustomerPhoneNumber)
+                @Html.ValidationMessageFor(model => model.CustomerPhoneNumber, null, new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Vložit" class="btn btn-success" />
+            </div>
+        </div>
+    }
+
+    @Html.ActionLink("Zpět", "Index")
+</div>

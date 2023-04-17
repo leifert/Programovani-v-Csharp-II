@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<div class="text-center">
+    @{string login = Context.Session.GetString("Username");
+        if (login == null)
+        {
+        <h2 class="display-4">Přihlašte se do systému</h2>
+        }
+        else
+        {
+            <h2 class="display-4">Vítejte</h2>
+        }
+    }
+</div>
