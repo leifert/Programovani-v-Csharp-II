@@ -22,6 +22,7 @@ This repo contains source codes from the Programming in C# II class at VŠB-TUO.
 Vlastní asynchronní ORM založeno na reflexi. Obě aplikace požadují přihlašení uživatele, u webové aplikace řešeno pomocí session.
 
 **Desktopová aplikace**
+
 ![alt text](https://github.com/leifert/Programovani-v-Csharp-II/blob/main/Cyklopujcovna/images/0.png?raw=true)
 
 ![alt text](https://github.com/leifert/Programovani-v-Csharp-II/blob/main/Cyklopujcovna/images/1.png?raw=true)
